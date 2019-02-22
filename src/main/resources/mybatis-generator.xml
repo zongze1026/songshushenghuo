@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="zgl_mysql_tables" targetRuntime="MyBatis3" defaultModelType="flat">
+        <!-- 防止生成的代码中有很多注释，加入下面的配置控制 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true" />
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+
+        <!-- 数据库连接 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/songshushenghuo?useUnicode=true&amp;characterEncoding=UTF-8"
+                        userId="root"
+                        password="root123">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!-- 数据表对应的model层  -->
+        <javaModelGenerator targetPackage="com.yitkeji.songshushenghuo.vo.model" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!--<sqlMapGenerator targetPackage="com.yitkeji.songshushenghuo.mapper"  targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.yitkeji.songshushenghuo.service"  targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>-->
+
+        <!-- 数据表进行生成操作 schema:相当于库名; tableName:表名; domainObjectName:对应的DO -->
+
+        <table tableName="tb_admin" domainObjectName="Admin">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_agent" domainObjectName="Agent">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_auth" domainObjectName="Auth">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_bank_auth" domainObjectName="BankAuth">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_card" domainObjectName="Card">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_commission" domainObjectName="Commission">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_doc" domainObjectName="Doc">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_log_api" domainObjectName="LogApi">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_order" domainObjectName="Order">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_plan" domainObjectName="Plan">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_role" domainObjectName="Role">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_system" domainObjectName="TbSystem">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="tb_user" domainObjectName="User">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+    </context>
+</generatorConfiguration>
